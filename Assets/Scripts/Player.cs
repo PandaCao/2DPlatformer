@@ -17,11 +17,15 @@ public class Player : MonoBehaviour
     public LayerMask groundLayer;
     public CollectibleManager cm;
     
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+    }
+    
     private void Start()
     {
         isFacingRight = true;
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     private void Update()

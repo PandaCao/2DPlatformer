@@ -13,16 +13,8 @@ public class MainMenu : MonoBehaviour
         AddResolutionsToDropdown();
     }
 
-    public void SelectLevel1() {
-        SceneManager.LoadSceneAsync(1);
-    }
-    
-    public void SelectLevel2() {
-        SceneManager.LoadSceneAsync(2);
-    }
-    
-    public void SelectLevel3() {
-        SceneManager.LoadSceneAsync(3);
+    public void SelectLevel(int level) {
+        SceneManager.LoadSceneAsync(level);
     }
 
     public void SetFullScreen(bool iSFullScreen) {
