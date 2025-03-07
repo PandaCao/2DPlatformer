@@ -8,8 +8,6 @@ public class MainMenu : MonoBehaviour
     public TMP_Dropdown resolutionDropdown;
     private Resolution[] _resolutions;
     private readonly List<Resolution> _resList = new();
-    public GameObject mainMenu;
-    public GameObject selectMenu;
 
     public void Start() {
         AddResolutionsToDropdown();
@@ -53,15 +51,10 @@ public class MainMenu : MonoBehaviour
         
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.RefreshShownValue();
-
-        foreach (var res in _resolutions) {
-            Debug.Log($"{res.width}x{res.height}, refresh rate: {res.refreshRateRatio}");
-        }
     }
 
     public void SetResolution(int i) {
         Screen.SetResolution(_resList[i].width, _resList[i].height, Screen.fullScreen);
-        Debug.Log($"{_resList[i].width}x{_resList[i].height}, refresh rate: {_resList[i].refreshRateRatio}");
     }
 
     public void QuitGame()
