@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public Vector2 boxSize;
     public float castDistance;
     public LayerMask groundLayer;
-    public CollectibleManager cm;
+    public GameManager gameManager;
     
     private void Awake()
     {
@@ -106,7 +106,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Collectible"))
         {
-            cm.appleCount++;
+            gameManager.appleCount++;
         }
     }
 }
