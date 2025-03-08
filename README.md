@@ -36,6 +36,7 @@ If you don't want to open Unity, you can run the pre-built version included in t
 - **Tilemap Collisions** – Used **Composite Collider 2D** and adjusted **Tilemap Collider 2D** settings for smoother collision detection (**Composite Operation: Merge**).
 - **Player Sticking to Walls** – Adjusted **Friction** in the **Material 2D** settings and fine-tuned **Rigidbody2D constraints**.
 - **Player Movement Glitches** – Switched to **Interpolate** in **Rigidbody2D** for smoother motion.
+- **UI Scaling** – Set **Anchor Presets** to **Stretch (Full Rect)** in **Rect Transform** for responsive UI scaling.
 
 ## Possible Improvements if Given More Time
 
